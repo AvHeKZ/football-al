@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background: black;
+}
+
+.border-red {
+  border-left: 2px solid red;
+}
+
+.border-green {
+  border-left: 2px solid green;
+}
+
+.navbar {
+  background-color: black;
+  border-bottom: 1px solid #f2f2f2;
+}
+.navbar ul {
+  list-style: none;
+}
+
+.topi {
+  cursor: pointer;
+  border: none;
+  background: black;
+  color: white;
+}
+
+.topi:focus {
+  outline: none;
+}
+
+.navbar2 {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  background: black;
+  border-bottom: 2px solid red;
+}
