@@ -4,7 +4,7 @@ function Navbar() {
   return (
     <nav className="navbar text-white  ">
       <button className="topi">
-        <Link to="/" className="text-white">
+        <Link to="/football-al" className="text-white">
           <i class="fas fa-bars"></i>
         </Link>
       </button>

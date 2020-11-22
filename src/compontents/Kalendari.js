@@ -4,7 +4,7 @@ import { GlobalContext } from "../context/GlobalState";
 
 import Calendar from "react-calendar";
 
-function Kalendari() {
+function Kalendari({ handleClose }) {
   const [value, setValue] = useState(new Date());
 
   const { fetchNdeshje } = useContext(GlobalContext);
@@ -13,20 +13,17 @@ function Kalendari() {
     value.getFullYear() + "-" + (value.getMonth() + 1) + "-" + value.getDate()
   );
 
+  const handleChange = (e) => {
+    setValue(e);
+    fetchNdeshje(
+      e.getFullYear() + "-" + (e.getMonth() + 1) + "-" + e.getDate()
+    );
+    handleClose();
+  };
+
   return (
     <div>
-      <Calendar
-        onChange={setValue}
-        onClickDay={() =>
-          fetchNdeshje(
-            value.getFullYear() +
-              "-" +
-              (value.getMonth() + 1) +
-              "-" +
-              value.getDate()
-          )
-        }
-      />
+      <Calendar onChange={handleChange} />
     </div>
   );
 }
