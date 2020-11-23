@@ -11,18 +11,18 @@ function Data({ el }) {
         position: "relative",
       }}
     >
-      <div className="div d-flex align-items-center" style={{ flex: "33%" }}>
+      <div className="div d-flex align-items-center" style={{ flex: "1" }}>
         <img
           src={el.localTeam.data.logo_path}
           alt=""
           className="m-0  mr-1"
-          style={{ width: "50px", height: "50px" }}
+          style={{ width: "35px", height: "35px" }}
         />
         <p className="m-0  ">{el.localTeam.data.name}</p>
       </div>
       <div
         style={{
-          flex: "33%",
+          flex: "1",
           display: "grid",
           placeItems: "center",
           position: "relative",
@@ -31,7 +31,7 @@ function Data({ el }) {
         <div
           style={{
             position: "absolute",
-            top: "-5px",
+            top: "-9px",
             color: "red",
           }}
         >
@@ -40,7 +40,7 @@ function Data({ el }) {
         <div
           style={{
             position: "absolute",
-            bottom: "-5px",
+            bottom: "-9px",
             color: "red",
           }}
         >
@@ -53,14 +53,14 @@ function Data({ el }) {
 
       <div
         className="d-flex align-items-center justify-content-end"
-        style={{ flex: "33%" }}
+        style={{ flex: "1" }}
       >
         <p className="m-0 text-center ">{el.visitorTeam.data.name}</p>
         <img
           src={el.visitorTeam.data.logo_path}
           alt=""
           className="ml-1 "
-          style={{ width: "50px", height: "50px" }}
+          style={{ width: "35px", height: "35px" }}
         />
       </div>
     </li>
