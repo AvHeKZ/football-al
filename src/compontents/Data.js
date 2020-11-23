@@ -16,9 +16,11 @@ function Data({ el }) {
           src={el.localTeam.data.logo_path}
           alt=""
           className="m-0  mr-1"
-          style={{ width: "35px", height: "35px" }}
+          style={{ width: "30px", height: "30px" }}
         />
-        <p className="m-0  ">{el.localTeam.data.name}</p>
+        <p className="m-0 " style={{ fontSize: "0.9rem" }}>
+          {el.localTeam.data.name}
+        </p>
       </div>
       <div
         style={{
@@ -31,7 +33,7 @@ function Data({ el }) {
         <div
           style={{
             position: "absolute",
-            top: "-9px",
+            top: "-10px",
             color: "red",
           }}
         >
@@ -40,14 +42,14 @@ function Data({ el }) {
         <div
           style={{
             position: "absolute",
-            bottom: "-9px",
+            bottom: "-10px",
             color: "red",
           }}
         >
           {el.scores.ht_score && `HT ${el.scores.ht_score}`}
         </div>
         {el.time.status === "NS"
-          ? "-"
+          ? `${el.time.starting_at.time.slice(0, 5)}`
           : `${el.scores.localteam_score} - ${el.scores.visitorteam_score}`}
       </div>
 
@@ -55,12 +57,14 @@ function Data({ el }) {
         className="d-flex align-items-center justify-content-end"
         style={{ flex: "1" }}
       >
-        <p className="m-0 text-center ">{el.visitorTeam.data.name}</p>
+        <p className="m-0 text-center" style={{ fontSize: "0.9rem" }}>
+          {el.visitorTeam.data.name}
+        </p>
         <img
           src={el.visitorTeam.data.logo_path}
           alt=""
           className="ml-1 "
-          style={{ width: "35px", height: "35px" }}
+          style={{ width: "30px", height: "30px" }}
         />
       </div>
     </li>

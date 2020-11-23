@@ -26,6 +26,8 @@ export const GlobalProvider = ({ children }) => {
     setNdeshjet(result.data.data);
   };
 
+  console.log(ndeshjet);
+
   const liveNdeshje = async () => {
     const result = await axios.get(
       `https://soccer.sportmonks.com/api/v2.0/livescores/now?api_token=iIi4dPDDAhYlTc6fk8Kn5PV7Vmff7raIeqXzrUd6XjNC2rgocPpcSBdxdlV6&include=localTeam,visitorTeam,league,contry`
