@@ -1,8 +1,20 @@
+import { Link } from "react-router-dom";
+
 function Data({ el }) {
   console.log(el.time.status);
   return (
-    <li
-      className={"text-white d-flex  p-2  justify-content-between "}
+    <Link
+      to={{
+        pathname: `/h2h/${el.localTeam.data.id}/${el.visitorTeam.data.id}`,
+        events: el.events,
+        localTeam: el.localTeam.data.logo_path,
+        visitorTeam: el.visitorTeam.data.logo_path,
+      }}
+      className={
+        el.time.status === "LIVE"
+          ? "text-white d-flex  p-2  justify-content-between border-green"
+          : "text-white d-flex  p-2  justify-content-between"
+      }
       style={{
         background: "black",
         width: "100%",
@@ -67,7 +79,7 @@ function Data({ el }) {
           style={{ width: "30px", height: "30px" }}
         />
       </div>
-    </li>
+    </Link>
   );
 }
 

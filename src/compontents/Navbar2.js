@@ -5,15 +5,15 @@ import { GlobalContext } from "../context/GlobalState";
 function Navbar2() {
   const { fetchNdeshje, liveNdeshje } = useContext(GlobalContext);
 
-  const days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
+  // const days = [
+  //   "Sunday",
+  //   "Monday",
+  //   "Tuesday",
+  //   "Wednesday",
+  //   "Thursday",
+  //   "Friday",
+  //   "Saturday",
+  // ];
   const monthNames = [
     "Jan",
     "Feb",

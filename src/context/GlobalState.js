@@ -9,19 +9,13 @@ export const GlobalProvider = ({ children }) => {
   const d = new Date();
   const today = d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate();
   useEffect(() => {
-    const fetchData = async () => {
-      const result = await axios.get(
-        `https://soccer.sportmonks.com/api/v2.0/fixtures/date/${today}?api_token=iIi4dPDDAhYlTc6fk8Kn5PV7Vmff7raIeqXzrUd6XjNC2rgocPpcSBdxdlV6&include=localTeam,visitorTeam,league,contry`
-      );
-      setNdeshjet(result.data.data);
-    };
-    fetchData();
+    fetchNdeshje(today);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const fetchNdeshje = async (x) => {
     const result = await axios.get(
-      `https://soccer.sportmonks.com/api/v2.0/fixtures/date/${x}?api_token=iIi4dPDDAhYlTc6fk8Kn5PV7Vmff7raIeqXzrUd6XjNC2rgocPpcSBdxdlV6&include=localTeam,visitorTeam,league,contry`
+      `https://soccer.sportmonks.com/api/v2.0/fixtures/date/${x}?api_token=iIi4dPDDAhYlTc6fk8Kn5PV7Vmff7raIeqXzrUd6XjNC2rgocPpcSBdxdlV6&include=localTeam,visitorTeam,league,contry,events`
     );
     setNdeshjet(result.data.data);
   };
